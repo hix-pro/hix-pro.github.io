@@ -2,11 +2,11 @@
 
 **Live: [hix-pro.github.io](https://hix-pro.github.io/)**
 
-The front door for [hix tools](https://github.com/hix-pro) — eight local-first developer tools that catch what CI misses. One static page, no build step.
+The front door for [hix tools](https://github.com/hix-pro) — nine local-first developer tools that catch what CI misses. One static page, no build step.
 
 ## What's here
 
-- The eight-tool suite, with browser demos and install links
+- The nine-tool suite, with browser demos and install links
 - Three featured posts from the [writing site](https://hix-pro.github.io/blog/)
 - A short explanation of the local-first approach
 - RSS, sitemap, and social metadata

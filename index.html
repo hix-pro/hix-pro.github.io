@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>hix tools — local-first developer tools that catch what CI misses</title>
-  <meta name="description" content="Eight local-first tools for the checks CI misses: env drift, dangerous SQL migrations, breaking API contracts, GitHub Actions risk, Docker Compose footguns, TypeScript semver, repo momentum, and remote control for a coding agent.">
+  <meta name="description" content="Nine local-first tools for the checks CI misses: env drift, dangerous SQL migrations, breaking API contracts, GitHub Actions risk, Docker Compose footguns, lockfile drift, TypeScript semver, repo momentum, and remote control for a coding agent.">
   <link rel="canonical" href="https://hix-pro.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
@@ -12,12 +12,12 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="hix tools">
   <meta property="og:title" content="hix tools — catch what CI misses">
-  <meta property="og:description" content="Eight local-first developer tools. No backend, no account, no telemetry.">
+  <meta property="og:description" content="Nine local-first developer tools. No backend, no account, no telemetry.">
   <meta property="og:url" content="https://hix-pro.github.io/">
   <meta property="og:image" content="https://hix-pro.github.io/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="hix tools — catch what CI misses">
-  <meta name="twitter:description" content="Eight local-first developer tools. No backend, no account, no telemetry.">
+  <meta name="twitter:description" content="Nine local-first developer tools. No backend, no account, no telemetry.">
   <meta name="twitter:image" content="https://hix-pro.github.io/assets/og.png">
   <script type="application/ld+json">
   {
@@ -48,13 +48,13 @@
       <div class="hero-copy">
         <p class="eyebrow">Local-first developer tools</p>
         <h1>Catch what CI misses.</h1>
-        <p class="lede">Eight small tools — and one runner — that review the change before it merges: env drift, dangerous SQL, breaking contracts, workflow risk, Compose footguns, semver, repo momentum, and a coding agent in your pocket.</p>
+        <p class="lede">Nine small tools — and one runner — that review the change before it merges: env drift, dangerous SQL, breaking contracts, workflow risk, Compose footguns, lockfile drift, semver, repo momentum, and a coding agent in your pocket.</p>
         <p class="lede lede-strong">No backend. No account. No telemetry.</p>
         <div class="hero-actions">
           <a class="button" href="#tools">Browse the suite</a>
           <a class="button ghost" href="https://hix-pro.github.io/blog/">Read the writing</a>
         </div>
-        <p class="hero-meta"><span>8 tools + hix</span><span>MIT licensed</span><span>Rust · TypeScript · Python</span></p>
+        <p class="hero-meta"><span>9 tools + hix</span><span>MIT licensed</span><span>Rust · TypeScript · Python</span></p>
       </div>
       <div class="hero-art">
         <img src="assets/banner.svg" alt="hix tools — run everything locally, no backend" width="1200" height="300">
@@ -84,7 +84,7 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">The suite</p>
-          <h2>Eight tools, one job: review the change.</h2>
+          <h2>Nine tools, one job: review the change.</h2>
         </div>
         <a class="section-link" href="https://github.com/topics/hix-tools">All on GitHub <span aria-hidden="true">→</span></a>
       </div>
@@ -129,6 +129,13 @@
           <div class="tool-top"><span class="tool-mark">TS</span><span class="tool-kind">CLI + Action</span></div>
           <h3>TypeShift</h3>
           <p>Compare TypeScript declarations and get the semver bump the change actually requires.</p>
+          <span class="tool-link">Install <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="tool" href="https://github.com/hix-pro/locklens" style="--accent: #f778ba">
+          <div class="tool-top"><span class="tool-mark">LL</span><span class="tool-kind">CLI + Action</span></div>
+          <h3>LockLens</h3>
+          <p>Compare two lockfiles by package: upgrades, downgrades, checksum changes, and source drift.</p>
           <span class="tool-link">Install <span aria-hidden="true">→</span></span>
         </a>
 
