@@ -48,13 +48,13 @@
       <div class="hero-copy">
         <p class="eyebrow">Local-first developer tools</p>
         <h1>Catch what CI misses.</h1>
-        <p class="lede">Eight small tools that review the change before it merges: env drift, dangerous SQL, breaking contracts, workflow risk, Compose footguns, semver, repo momentum, and a coding agent in your pocket.</p>
+        <p class="lede">Eight small tools — and one runner — that review the change before it merges: env drift, dangerous SQL, breaking contracts, workflow risk, Compose footguns, semver, repo momentum, and a coding agent in your pocket.</p>
         <p class="lede lede-strong">No backend. No account. No telemetry.</p>
         <div class="hero-actions">
           <a class="button" href="#tools">Browse the suite</a>
           <a class="button ghost" href="https://hix-pro.github.io/blog/">Read the writing</a>
         </div>
-        <p class="hero-meta"><span>8 tools</span><span>MIT licensed</span><span>Rust · TypeScript · Python</span></p>
+        <p class="hero-meta"><span>8 tools + hix</span><span>MIT licensed</span><span>Rust · TypeScript · Python</span></p>
       </div>
       <div class="hero-art">
         <img src="assets/banner.svg" alt="hix tools — run everything locally, no backend" width="1200" height="300">
@@ -63,6 +63,21 @@
           <span>Everything runs on your machine or in your CI.</span>
         </div>
       </div>
+    </section>
+
+
+    <section class="runner" aria-labelledby="runner-title">
+      <div class="runner-copy">
+        <p class="eyebrow">The runner</p>
+        <h2 id="runner-title">One command. Every check.</h2>
+        <p><a href="https://github.com/hix-pro/hix">hix</a> finds the tools you have installed, runs the checks in parallel, and gives you one table and one exit code. Missing tools are skipped, not faked. It never installs anything or phones home.</p>
+      </div>
+      <div class="runner-install">
+        <span class="runner-label">Install from source</span>
+        <code><span>pipx install \</span><span>git+https://github.com/hix-pro/hix.git</span></code>
+        <button type="button" data-copy="pipx install git+https://github.com/hix-pro/hix.git" aria-label="Copy the hix install command">Copy</button>
+      </div>
+      <a class="button ghost runner-link" href="https://github.com/hix-pro/hix">How it works <span aria-hidden="true">&rarr;</span></a>
     </section>
 
     <section id="tools" class="section">
@@ -153,11 +168,12 @@
         <h2>One check, one report, one exit code.</h2>
         <p class="panel-copy">The CLIs ship prebuilt binaries for Linux, macOS, and Windows, plus composite GitHub Actions. JSON and Markdown output are built in.</p>
         <div class="terminal">
-          <div class="terminal-bar"><span></span><span></span><span></span><em>ci</em><button type="button" data-copy="envaudit scan .&#10;migration-guard check migrations/&#10;apiwatch check --fail-on-breaking&#10;typeshift --from 1.2.3 --to 1.3.0" aria-label="Copy the example commands">Copy</button></div>
-          <pre><code><span class="t-prompt">$</span> envaudit scan .
+          <div class="terminal-bar"><span></span><span></span><span></span><em>ci</em><button type="button" data-copy="hix check&#10;envaudit scan .&#10;migration-guard check migrations/&#10;apiwatch check --fail-on-breaking&#10;typeshift compare ./types/v1 ./types/v2 --fail-on-breaking" aria-label="Copy the example commands">Copy</button></div>
+          <pre><code><span class="t-prompt">$</span> hix check
+<span class="t-prompt">$</span> envaudit scan .
 <span class="t-prompt">$</span> migration-guard check migrations/
 <span class="t-prompt">$</span> apiwatch check --fail-on-breaking
-<span class="t-prompt">$</span> typeshift --from 1.2.3 --to 1.3.0</code></pre>
+<span class="t-prompt">$</span> typeshift compare ./types/v1 ./types/v2 --fail-on-breaking</code></pre>
           <div class="terminal-foot">
             <span class="t-ok">✓</span> local-only
             <span class="t-ok">✓</span> JSON output
