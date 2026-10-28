@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>hix tools — local-first developer tools that catch what CI misses</title>
+  <meta name="description" content="Eight local-first tools for the checks CI misses: env drift, dangerous SQL migrations, breaking API contracts, GitHub Actions risk, Docker Compose footguns, TypeScript semver, repo momentum, and remote control for a coding agent.">
+  <link rel="canonical" href="https://hix-pro.github.io/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="alternate" type="application/rss+xml" title="hix tools — writing" href="https://hix-pro.github.io/blog/feed.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="hix tools">
+  <meta property="og:title" content="hix tools — catch what CI misses">
+  <meta property="og:description" content="Eight local-first developer tools. No backend, no account, no telemetry.">
+  <meta property="og:url" content="https://hix-pro.github.io/">
+  <meta property="og:image" content="https://hix-pro.github.io/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="hix tools — catch what CI misses">
+  <meta name="twitter:description" content="Eight local-first developer tools. No backend, no account, no telemetry.">
+  <meta name="twitter:image" content="https://hix-pro.github.io/assets/og.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "hix tools",
+    "url": "https://hix-pro.github.io/",
+    "description": "Local-first developer tools that catch what CI misses.",
+    "sameAs": ["https://github.com/hix-pro"]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <a class="brand" href="./"><span class="prompt">&gt;_</span> hix tools</a>
+    <nav aria-label="Site">
+      <a href="#tools">Tools</a>
+      <a href="https://hix-pro.github.io/blog/">Writing</a>
+      <a href="https://github.com/hix-pro">GitHub</a>
+      <a href="https://hix-pro.github.io/blog/feed.xml">RSS</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Local-first developer tools</p>
+        <h1>Catch what CI misses.</h1>
+        <p class="lede">Eight small tools that review the change before it merges: env drift, dangerous SQL, breaking contracts, workflow risk, Compose footguns, semver, repo momentum, and a coding agent in your pocket.</p>
+        <p class="lede lede-strong">No backend. No account. No telemetry.</p>
+        <div class="hero-actions">
+          <a class="button" href="#tools">Browse the suite</a>
+          <a class="button ghost" href="https://hix-pro.github.io/blog/">Read the writing</a>
+        </div>
+        <p class="hero-meta"><span>8 tools</span><span>MIT licensed</span><span>Rust · TypeScript · Python</span></p>
+      </div>
+      <div class="hero-art">
+        <img src="assets/banner.svg" alt="hix tools — run everything locally, no backend" width="1200" height="300">
+        <div class="hero-note">
+          <span class="pulse" aria-hidden="true"></span>
+          <span>Everything runs on your machine or in your CI.</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="tools" class="section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">The suite</p>
+          <h2>Eight tools, one job: review the change.</h2>
+        </div>
+        <a class="section-link" href="https://github.com/topics/hix-tools">All on GitHub <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="tool-grid">
+        <a class="tool" href="https://hix-pro.github.io/action-lens/" style="--accent: #58a6ff">
+          <div class="tool-top"><span class="tool-mark">AL</span><span class="tool-kind">Browser</span></div>
+          <h3>ActionLens</h3>
+          <p>Paste a workflow and see the job graph, real matrix size, token permissions, risky triggers, and run footprint.</p>
+          <span class="tool-link">Open demo <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="tool" href="https://hix-pro.github.io/compose-map/" style="--accent: #39c5cf">
+          <div class="tool-top"><span class="tool-mark">CM</span><span class="tool-kind">Browser</span></div>
+          <h3>ComposeMap</h3>
+          <p>Drop in a Compose file and get a service graph plus a plain-English review of ports, mounts, secrets, and startup order.</p>
+          <span class="tool-link">Open demo <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="tool" href="https://github.com/hix-pro/env-audit" style="--accent: #3fb950">
+          <div class="tool-top"><span class="tool-mark">EA</span><span class="tool-kind">CLI + Action</span></div>
+          <h3>EnvAudit</h3>
+          <p>Find env vars that are missing, undocumented, unused, or hiding a committed secret.</p>
+          <span class="tool-link">Install <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="tool" href="https://github.com/hix-pro/migration-guard" style="--accent: #d29922">
+          <div class="tool-top"><span class="tool-mark">MG</span><span class="tool-kind">CLI + Action</span></div>
+          <h3>Migration Guard</h3>
+          <p>Statically catch destructive SQL, blocking DDL, and breaking renames before they reach a database.</p>
+          <span class="tool-link">Install <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="tool" href="https://github.com/hix-pro/api-watch" style="--accent: #f0883e">
+          <div class="tool-top"><span class="tool-mark">AW</span><span class="tool-kind">CLI + Action</span></div>
+          <h3>API Watch</h3>
+          <p>Diff OpenAPI and JSON contracts, classify what breaks, and fail CI only on the changes that matter.</p>
+          <span class="tool-link">Install <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="tool" href="https://github.com/hix-pro/typeshift" style="--accent: #a371f7">
+          <div class="tool-top"><span class="tool-mark">TS</span><span class="tool-kind">CLI + Action</span></div>
+          <h3>TypeShift</h3>
+          <p>Compare TypeScript declarations and get the semver bump the change actually requires.</p>
+          <span class="tool-link">Install <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="tool" href="https://github.com/hix-pro/reporace" style="--accent: #bc8cff">
+          <div class="tool-top"><span class="tool-mark">RR</span><span class="tool-kind">Dashboard</span></div>
+          <h3>RepoRace</h3>
+          <p>Rank repositories by star velocity and breakout growth, not raw star count.</p>
+          <span class="tool-link">View project <span aria-hidden="true">→</span></span>
+        </a>
+
+        <a class="tool" href="https://github.com/hix-pro/opencode-telegram" style="--accent: #2aabee">
+          <div class="tool-top"><span class="tool-mark">OT</span><span class="tool-kind">Bridge</span></div>
+          <h3>OpenCode Telegram</h3>
+          <p>Drive a local OpenCode server from Telegram: streaming replies, approvals, sessions, and schedules.</p>
+          <span class="tool-link">Install <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section split">
+      <div class="panel">
+        <p class="eyebrow">Try it now</p>
+        <h2>Two browser tools. No install.</h2>
+        <p class="panel-copy">ActionLens and ComposeMap parse everything in the tab. Your workflow, compose file, and secrets never leave the browser.</p>
+        <div class="panel-actions">
+          <a class="button" href="https://hix-pro.github.io/action-lens/">ActionLens</a>
+          <a class="button ghost" href="https://hix-pro.github.io/compose-map/">ComposeMap</a>
+        </div>
+        <ul class="check-list">
+          <li>ActionLens: job graph, matrix arithmetic, 16 workflow rules</li>
+          <li>ComposeMap: service graph, 14 Compose rules, secret redaction</li>
+          <li>Both export Markdown, Mermaid, SVG, PNG, and JSON</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <p class="eyebrow">In your CI</p>
+        <h2>One check, one report, one exit code.</h2>
+        <p class="panel-copy">The CLIs ship prebuilt binaries for Linux, macOS, and Windows, plus composite GitHub Actions. JSON and Markdown output are built in.</p>
+        <div class="terminal">
+          <div class="terminal-bar"><span></span><span></span><span></span><em>ci</em><button type="button" data-copy="envaudit scan .&#10;migration-guard check migrations/&#10;apiwatch check --fail-on-breaking&#10;typeshift --from 1.2.3 --to 1.3.0" aria-label="Copy the example commands">Copy</button></div>
+          <pre><code><span class="t-prompt">$</span> envaudit scan .
+<span class="t-prompt">$</span> migration-guard check migrations/
+<span class="t-prompt">$</span> apiwatch check --fail-on-breaking
+<span class="t-prompt">$</span> typeshift --from 1.2.3 --to 1.3.0</code></pre>
+          <div class="terminal-foot">
+            <span class="t-ok">✓</span> local-only
+            <span class="t-ok">✓</span> JSON output
+            <span class="t-ok">✓</span> documented limits
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section writing">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Writing</p>
+          <h2>What the checks actually catch.</h2>
+        </div>
+        <a class="section-link" href="https://hix-pro.github.io/blog/">All seven posts <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="writing-grid">
+        <a class="post" href="https://hix-pro.github.io/blog/posts/04-action-lens-16-workflow-checks.html">
+          <div class="post-cover"><img src="assets/04-actionlens.png" alt="ActionLens cover" loading="eager" width="2400" height="1260"></div>
+          <div class="post-body">
+            <p class="post-kicker">ActionLens</p>
+            <h3>16 things to check in your GitHub Actions workflows</h3>
+            <p>Triggers, token permissions, matrix size, script injection, and the checks that are easy to skip.</p>
+          </div>
+        </a>
+
+        <a class="post" href="https://hix-pro.github.io/blog/posts/05-compose-map-red-flags.html">
+          <div class="post-cover"><img src="assets/05-composemap.png" alt="ComposeMap cover" loading="eager" width="2400" height="1260"></div>
+          <div class="post-body">
+            <p class="post-kicker">ComposeMap</p>
+            <h3>Docker Compose red flags before you deploy</h3>
+            <p>Privileged containers, leaked secrets, host mounts, startup order, and the defaults worth changing.</p>
+          </div>
+        </a>
+
+        <a class="post" href="https://hix-pro.github.io/blog/posts/06-opencode-telegram-remote-control.html">
+          <div class="post-cover"><img src="assets/06-opencode-telegram.png" alt="OpenCode Telegram cover" loading="eager" width="2400" height="1260"></div>
+          <div class="post-body">
+            <p class="post-kicker">OpenCode Telegram</p>
+            <h3>Remote-controlling OpenCode from Telegram</h3>
+            <p>Streaming replies, permission approvals, session switching, and a guarded filesystem view.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <p class="eyebrow">Start here</p>
+      <h2>Pick the check that hurts.</h2>
+      <p class="lede">Every tool is MIT-licensed, documented, and honest about what it cannot prove. Start with the one that matches your next production risk.</p>
+      <div class="hero-actions">
+        <a class="button" href="https://github.com/hix-pro/env-audit">Catch env drift</a>
+        <a class="button ghost" href="https://github.com/hix-pro/migration-guard">Review a migration</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">
+      <span class="prompt">&gt;_</span> hix tools
+    </div>
+    <p>Local-first developer tools that catch what CI misses. MIT licensed. No backend, no account, no telemetry.</p>
+    <p class="footer-links">
+      <a href="https://github.com/hix-pro">GitHub</a>
+      <a href="https://github.com/topics/hix-tools">All tools</a>
+      <a href="https://hix-pro.github.io/blog/">Writing</a>
+      <a href="https://hix-pro.github.io/blog/feed.xml">RSS</a>
+    </p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[data-copy]').forEach(function (button) {
+      button.addEventListener('click', function () {
+        var text = button.getAttribute('data-copy');
+        if (!text) return;
+        navigator.clipboard.writeText(text).then(function () {
+          var original = button.textContent;
+          button.textContent = 'Copied';
+          window.setTimeout(function () { button.textContent = original; }, 1400);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
