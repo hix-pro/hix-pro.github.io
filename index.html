@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>hix tools — local-first developer tools that catch what CI misses</title>
-  <meta name="description" content="Nine local-first tools for the checks CI misses: env drift, dangerous SQL migrations, breaking API contracts, GitHub Actions risk, Docker Compose footguns, lockfile drift, TypeScript semver, repo momentum, and remote control for a coding agent.">
+  <meta name="description" content="Ten local-first tools for the checks CI misses: env drift, dangerous SQL migrations, breaking API contracts, GitHub Actions risk, Docker Compose footguns, lockfile drift, Terraform plan risk, TypeScript semver, repo momentum, and remote control for a coding agent.">
   <link rel="canonical" href="https://hix-pro.github.io/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="assets/style.css">
@@ -12,12 +12,12 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="hix tools">
   <meta property="og:title" content="hix tools — catch what CI misses">
-  <meta property="og:description" content="Nine local-first developer tools. No backend, no account, no telemetry.">
+  <meta property="og:description" content="Ten local-first developer tools. No backend, no account, no telemetry.">
   <meta property="og:url" content="https://hix-pro.github.io/">
   <meta property="og:image" content="https://hix-pro.github.io/assets/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="hix tools — catch what CI misses">
-  <meta name="twitter:description" content="Nine local-first developer tools. No backend, no account, no telemetry.">
+  <meta name="twitter:description" content="Ten local-first developer tools. No backend, no account, no telemetry.">
   <meta name="twitter:image" content="https://hix-pro.github.io/assets/og.png">
   <script type="application/ld+json">
   {
@@ -48,13 +48,13 @@
       <div class="hero-copy">
         <p class="eyebrow">Local-first developer tools</p>
         <h1>Catch what CI misses.</h1>
-        <p class="lede">Nine small tools — and one runner — that review the change before it merges: env drift, dangerous SQL, breaking contracts, workflow risk, Compose footguns, lockfile drift, semver, repo momentum, and a coding agent in your pocket.</p>
+        <p class="lede">Ten small tools — and one runner — that review the change before it merges: env drift, dangerous SQL, breaking contracts, workflow risk, Compose footguns, lockfile drift, Terraform plan risk, semver, repo momentum, and a coding agent in your pocket.</p>
         <p class="lede lede-strong">No backend. No account. No telemetry.</p>
         <div class="hero-actions">
           <a class="button" href="#tools">Browse the suite</a>
           <a class="button ghost" href="https://hix-pro.github.io/blog/">Read the writing</a>
         </div>
-        <p class="hero-meta"><span>9 tools + hix</span><span>MIT licensed</span><span>Rust · TypeScript · Python</span></p>
+        <p class="hero-meta"><span>10 tools + hix</span><span>MIT licensed</span><span>Rust · TypeScript · Python</span></p>
       </div>
       <div class="hero-art">
         <img src="assets/banner.svg" alt="hix tools — run everything locally, no backend" width="1200" height="300">
@@ -84,7 +84,7 @@
       <div class="section-head">
         <div>
           <p class="eyebrow">The suite</p>
-          <h2>Nine tools, one job: review the change.</h2>
+          <h2>Ten tools, one job: review the change.</h2>
         </div>
         <a class="section-link" href="https://github.com/topics/hix-tools">All on GitHub <span aria-hidden="true">→</span></a>
       </div>
@@ -152,6 +152,24 @@
           <p>Drive a local OpenCode server from Telegram: streaming replies, approvals, sessions, and schedules.</p>
           <span class="tool-link">Install <span aria-hidden="true">→</span></span>
         </a>
+
+        <a class="tool tool-wide" href="https://github.com/hix-pro/planguard" style="--accent: #f85149">
+          <div class="tool-top"><span class="tool-mark">PG</span><span class="tool-kind">CLI + Action · New</span></div>
+          <div class="tool-wide-body">
+            <div class="tool-wide-copy">
+              <h3>PlanGuard</h3>
+              <p>Read <code>terraform show -json</code> output before apply and flag what a plan diff hides: destroyed databases, public ingress, wildcard IAM, disabled encryption, and secrets in the plan.</p>
+              <span class="tool-link">Install <span aria-hidden="true">→</span></span>
+            </div>
+            <ul class="tool-tags" aria-label="What PlanGuard checks">
+              <li>stateful destroy</li>
+              <li>public ingress</li>
+              <li>wildcard IAM</li>
+              <li>encryption off</li>
+              <li>plaintext secrets</li>
+            </ul>
+          </div>
+        </a>
       </div>
     </section>
 
@@ -175,11 +193,12 @@
         <h2>One check, one report, one exit code.</h2>
         <p class="panel-copy">The CLIs ship prebuilt binaries for Linux, macOS, and Windows, plus composite GitHub Actions. JSON and Markdown output are built in.</p>
         <div class="terminal">
-          <div class="terminal-bar"><span></span><span></span><span></span><em>ci</em><button type="button" data-copy="hix check&#10;envaudit scan .&#10;migration-guard check migrations/&#10;apiwatch check --fail-on-breaking&#10;typeshift compare ./types/v1 ./types/v2 --fail-on-breaking" aria-label="Copy the example commands">Copy</button></div>
+          <div class="terminal-bar"><span></span><span></span><span></span><em>ci</em><button type="button" data-copy="hix check&#10;envaudit scan .&#10;migration-guard check migrations/&#10;apiwatch check --fail-on-breaking&#10;planguard review plan.json --fail-on error&#10;typeshift compare ./types/v1 ./types/v2 --fail-on-breaking" aria-label="Copy the example commands">Copy</button></div>
           <pre><code><span class="t-prompt">$</span> hix check
 <span class="t-prompt">$</span> envaudit scan .
 <span class="t-prompt">$</span> migration-guard check migrations/
 <span class="t-prompt">$</span> apiwatch check --fail-on-breaking
+<span class="t-prompt">$</span> planguard review plan.json --fail-on error
 <span class="t-prompt">$</span> typeshift compare ./types/v1 ./types/v2 --fail-on-breaking</code></pre>
           <div class="terminal-foot">
             <span class="t-ok">✓</span> local-only
@@ -196,7 +215,7 @@
           <p class="eyebrow">Writing</p>
           <h2>What the checks actually catch.</h2>
         </div>
-        <a class="section-link" href="https://hix-pro.github.io/blog/">All seven posts <span aria-hidden="true">→</span></a>
+        <a class="section-link" href="https://hix-pro.github.io/blog/">All eight posts <span aria-hidden="true">→</span></a>
       </div>
 
       <div class="writing-grid">
@@ -218,12 +237,12 @@
           </div>
         </a>
 
-        <a class="post" href="https://hix-pro.github.io/blog/posts/06-opencode-telegram-remote-control.html">
-          <div class="post-cover"><img src="assets/06-opencode-telegram.png" alt="OpenCode Telegram cover" loading="eager" width="2400" height="1260"></div>
+        <a class="post" href="https://hix-pro.github.io/blog/posts/08-planguard-terraform-plan-review.html">
+          <div class="post-cover"><img src="assets/08-planguard.png" alt="PlanGuard cover" loading="eager" width="2400" height="1260"></div>
           <div class="post-body">
-            <p class="post-kicker">OpenCode Telegram</p>
-            <h3>Remote-controlling OpenCode from Telegram</h3>
-            <p>Streaming replies, permission approvals, session switching, and a guarded filesystem view.</p>
+            <p class="post-kicker">PlanGuard</p>
+            <h3>Terraform plans hide the risk. PlanGuard reads them.</h3>
+            <p>Stateful destroys, public ingress, wildcard IAM, disabled encryption, and secrets a plan diff treats equally.</p>
           </div>
         </a>
       </div>
@@ -236,6 +255,7 @@
       <div class="hero-actions">
         <a class="button" href="https://github.com/hix-pro/env-audit">Catch env drift</a>
         <a class="button ghost" href="https://github.com/hix-pro/migration-guard">Review a migration</a>
+        <a class="button ghost" href="https://github.com/hix-pro/planguard">Review a plan</a>
       </div>
     </section>
   </main>

@@ -431,6 +431,53 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   color: var(--accent, var(--green));
 }
 
+.tool-wide {
+  grid-column: 1 / -1;
+  min-height: 0;
+}
+
+.tool-wide-body {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr);
+  align-items: center;
+  gap: 28px;
+}
+
+.tool-wide-copy h3 { font-size: 22px; }
+.tool-wide-copy p { max-width: 68ch; margin-bottom: 14px; }
+.tool-wide-copy code {
+  padding: 1px 5px;
+  border: 1px solid #2a323d;
+  border-radius: 4px;
+  background: #1f2630;
+  color: #c9d1d9;
+  font-family: var(--mono);
+  font-size: .86em;
+}
+
+.tool-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-tags li {
+  padding: 4px 10px;
+  border: 1px solid color-mix(in srgb, var(--accent, var(--green)) 30%, transparent);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent, var(--green)) 10%, transparent);
+  color: var(--accent, var(--green));
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: .03em;
+  white-space: nowrap;
+}
+
 /* Split panels */
 
 .split {
@@ -440,6 +487,7 @@ h1, h2, h3 { letter-spacing: -0.02em; }
 }
 
 .panel {
+  min-width: 0;
   padding: 32px;
   background: var(--bg-soft);
   border: 1px solid var(--border);
@@ -547,6 +595,14 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   font-size: 12.5px;
   line-height: 1.85;
   color: #c9d1d9;
+  scrollbar-width: thin;
+  scrollbar-color: #30363d transparent;
+}
+.terminal pre::-webkit-scrollbar { height: 8px; }
+.terminal pre::-webkit-scrollbar-track { background: transparent; }
+.terminal pre::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 4px;
 }
 .terminal code { font-family: inherit; }
 .t-prompt { color: var(--green); }
@@ -688,6 +744,8 @@ h1, h2, h3 { letter-spacing: -0.02em; }
   .split { grid-template-columns: 1fr; }
   .panel { padding: 24px; }
   .writing-grid { grid-template-columns: 1fr; }
+  .tool-wide-body { grid-template-columns: 1fr; gap: 16px; }
+  .tool-tags { justify-content: flex-start; }
   .cta { padding: 64px 0 72px; }
 }
 
