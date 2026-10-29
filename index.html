@@ -114,7 +114,7 @@
         <a class="tool" href="https://github.com/hix-pro/migration-guard" style="--accent: #d29922">
           <div class="tool-top"><span class="tool-mark">MG</span><span class="tool-kind">CLI + Action</span></div>
           <h3>Migration Guard</h3>
-          <p>Statically catch destructive SQL, blocking DDL, and breaking renames before they reach a database.</p>
+          <p>Find SQL migrations across frameworks, then catch destructive statements, blocking DDL, and breaking renames.</p>
           <span class="tool-link">Install <span aria-hidden="true">→</span></span>
         </a>
 
@@ -193,10 +193,10 @@
         <h2>One check, one report, one exit code.</h2>
         <p class="panel-copy">The CLIs ship prebuilt binaries for Linux, macOS, and Windows, plus composite GitHub Actions. JSON and Markdown output are built in.</p>
         <div class="terminal">
-          <div class="terminal-bar"><span></span><span></span><span></span><em>ci</em><button type="button" data-copy="hix check&#10;envaudit scan .&#10;migration-guard check migrations/&#10;apiwatch check --fail-on-breaking&#10;planguard review plan.json --fail-on error&#10;typeshift compare ./types/v1 ./types/v2 --fail-on-breaking" aria-label="Copy the example commands">Copy</button></div>
+          <div class="terminal-bar"><span></span><span></span><span></span><em>ci</em><button type="button" data-copy="hix check&#10;envaudit scan .&#10;migration-guard check&#10;apiwatch check --fail-on-breaking&#10;planguard review plan.json --fail-on error&#10;typeshift compare ./types/v1 ./types/v2 --fail-on-breaking" aria-label="Copy the example commands">Copy</button></div>
           <pre><code><span class="t-prompt">$</span> hix check
 <span class="t-prompt">$</span> envaudit scan .
-<span class="t-prompt">$</span> migration-guard check migrations/
+<span class="t-prompt">$</span> migration-guard check
 <span class="t-prompt">$</span> apiwatch check --fail-on-breaking
 <span class="t-prompt">$</span> planguard review plan.json --fail-on error
 <span class="t-prompt">$</span> typeshift compare ./types/v1 ./types/v2 --fail-on-breaking</code></pre>
